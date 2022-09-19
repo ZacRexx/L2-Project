@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Main/Objects/Obj-Checkpoint-On.png" type="Texture" id=1]
+[ext_resource path="res://Checkpoint2.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 24.0
+height = 64.0
+
+[node name="Checkpoint2" type="Area2D"]
+collision_layer = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -16, 120 )
+scale = Vector2( 2.29167, 3.54167 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -16, 104 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_Checkpoint2_body_entered"]
