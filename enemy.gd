@@ -68,7 +68,7 @@ func _physics_process(_delta):
 			motion.x = -speed
 	
 	
-	
+	#Git error
 	motion = move_and_slide(motion)
 # this means that when the plaer enters the collsion of the bat 
 #the player will go to the global position.
